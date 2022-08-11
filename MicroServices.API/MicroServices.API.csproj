@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>d8f98384-962b-49cc-a52a-1a2119c662e4</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DomainEvents\**" />
+    <Compile Remove="Extensions\**" />
+    <Compile Remove="Factories\**" />
+    <Compile Remove="IntegrationEvents\**" />
+    <Compile Remove="Services\**" />
+    <Content Remove="DomainEvents\**" />
+    <Content Remove="Extensions\**" />
+    <Content Remove="Factories\**" />
+    <Content Remove="IntegrationEvents\**" />
+    <Content Remove="Services\**" />
+    <EmbeddedResource Remove="DomainEvents\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <EmbeddedResource Remove="Factories\**" />
+    <EmbeddedResource Remove="IntegrationEvents\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="DomainEvents\**" />
+    <None Remove="Extensions\**" />
+    <None Remove="Factories\**" />
+    <None Remove="IntegrationEvents\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.EntityFrameworkCore.Design">
+      <HintPath>..\..\..\..\.nuget\packages\microsoft.entityframeworkcore.design\6.0.6\lib\net6.0\Microsoft.EntityFrameworkCore.Design.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
